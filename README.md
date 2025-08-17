@@ -13,7 +13,7 @@ Nosso objetivo é criar uma experiência rápida, segura e interativa para usuá
 - Estrutura escalável para novos conteúdos  
 
 ## 📌 Propósito
-O **NOVA FUSION MASTER** nasceu para ser um espaço de tecnologia e inovação, explorando:
+**NOVA FUSION MASTER** nasceu para ser um espaço de tecnologia e inovação, explorando:
 - Inteligência Artificial  
 - Tendências digitais  
 - Projetos criativos  

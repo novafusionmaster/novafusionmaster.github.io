@@ -1,4 +1,4 @@
-/** 
+/**
  * Fusion252 Mídia - Core JS
  * - Chat leve e funcional
  * - Hook para IA real (ativaremos na Vercel)
@@ -56,7 +56,7 @@ function loadAds() {
   console.log("Anúncios carregados.");
 }
 
-// Agora vamos desabilitar a execução automática do reconhecimento de voz
+// Botão flutuante para iniciar o chat
 let recognitionActive = false;  // Controle de status do reconhecimento de voz
 
 function startRecognition() {
@@ -79,8 +79,19 @@ function startRecognition() {
   recognition.start();  // Inicia o reconhecimento de voz
 }
 
+// Função para processar o comando de voz
 function processVoiceCommand(command) {
-  // Controle de execução de comandos
   console.log(`Comando de voz recebido: ${command}`);
   // Aqui a lógica pode ser implementada para processar o comando conforme necessário
 }
+
+// Inicia o reconhecimento de voz apenas quando desejado
+function triggerRecognition() {
+  startRecognition(); // Chama a função de reconhecimento de voz
+}
+
+// Botão flutuante para abrir/fechar o chat
+document.getElementById('chat-launcher').addEventListener('click', () => {
+  const panel = document.getElementById('chat-panel');
+  panel.style.display = panel.style.display === 'flex' ? 'none' : 'flex';
+});

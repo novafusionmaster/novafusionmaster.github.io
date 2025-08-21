@@ -5,17 +5,6 @@
  * - Loaders de anúncios com fallback seguro
  */
 
-// Abre/fecha o chat
-const launcher = () => {
-  const panel = document.getElementById('chat-panel');
-  panel.style.display = panel.style.display === 'flex' ? 'none' : 'flex';
-};
-
-window.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('chat-launcher');
-  if (btn) btn.addEventListener('click', launcher);
-});
-
 // Função de envio de mensagem
 async function sendMessage() {
   const input = document.getElementById('chat-text');
@@ -56,7 +45,18 @@ function loadAds() {
   console.log("Anúncios carregados.");
 }
 
-// Botão flutuante para iniciar o chat
+// Abre/fecha o chat
+const launcher = () => {
+  const panel = document.getElementById('chat-panel');
+  panel.style.display = panel.style.display === 'flex' ? 'none' : 'flex';
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('chat-launcher');
+  if (btn) btn.addEventListener('click', launcher);
+});
+
+// Controle de reconhecimento de voz (agora com execução explícita)
 let recognitionActive = false;  // Controle de status do reconhecimento de voz
 
 function startRecognition() {
